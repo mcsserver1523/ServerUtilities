@@ -1,0 +1,62 @@
+name: ServerUtilities
+version: '1.0.0'
+main: de.serverutilities.ServerUtilitiesPlugin
+api-version: '1.21'
+author: ServerUtilities
+description: Scoreboard, economy and dynamic market plugin.
+commands:
+  market:
+    description: Öffnet den Markt oder handelt direkt.
+    usage: /market [buy|sell|search] <item> [anzahl]
+  balance:
+    description: Setzt den Kontostand eines Spielers.
+    usage: /balance <player> <set|add|withdraw|remove> <amount>
+    permission: serverutilities.admin
+  checkbalance:
+    description: Zeigt den Kontostand eines Spielers.
+    usage: /checkbalance <player>
+    permission: serverutilities.admin
+  checkhistory:
+    description: Zeigt die Kauf- und Verkaufshistorie eines Spielers.
+    usage: /checkhistory <player> [amount]
+    permission: serverutilities.admin
+  tode:
+    description: Setzt die Todeszahl eines Spielers.
+    usage: /tode <spieler> <value>
+    permission: serverutilities.admin
+  checktode:
+    description: Zeigt die Todeszahl eines Spielers.
+    usage: /checktode <spieler>
+    permission: serverutilities.admin
+  resetmarket:
+    description: Setzt Marktpreise zurück.
+    usage: /resetmarket [item]
+    permission: serverutilities.admin
+  sell:
+    description: Öffnet ein Verkaufsfenster.
+    usage: /sell
+  sellall:
+    description: Legt alle verkaufbaren Items in ein Verkaufsfenster.
+    usage: /sellall
+  setmarket:
+    description: Öffnet den Markt im Admin-Modus.
+    usage: /setmarket
+    permission: serverutilities.admin
+  settings:
+    description: Öffnet die Plugin-Einstellungen.
+    usage: /settings
+    permission: serverutilities.admin
+  donate:
+    description: Spendet Geld an Spieler oder die Serverkasse.
+    usage: /donate <player> <name> <amount> oder /donate <serverkasse> <amount>
+  donateconfirm:
+    description: Bestätigt eine Spende.
+    usage: /donateconfirm <token>
+  serverbank:
+    description: Verändert oder prüft die Serverkasse.
+    usage: /serverbank <set|add|withdraw|remove> <amount> oder /serverbank <in|out> [amount]
+    permission: serverutilities.admin
+permissions:
+  serverutilities.admin:
+    description: Zugriff auf alle ServerUtilities Admin-Befehle.
+    default: op

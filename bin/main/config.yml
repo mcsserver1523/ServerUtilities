@@ -1,0 +1,423 @@
+settings:
+  scoreboard-enabled: true
+  market-enabled: true
+  deaths-enabled: true
+  history-enabled: true
+
+features:
+  scoreboard: true
+  market: true
+  deaths: true
+  history: true
+  donations: true
+  server-bank: true
+  settings-gui: true
+  market-graphs: true
+  balance-graphs: true
+  sell-gui: true
+  sellall: true
+  direct-market-commands: true
+  market-search: true
+
+performance:
+  save-delay-ticks: 100
+
+scoreboard:
+  title: "&6ServerUtilities"
+  show-player: true
+  show-stats: true
+  show-money: true
+  show-deaths: true
+  show-community: true
+  show-server-bank: true
+
+economy:
+  starting-balance: 1000.0
+  allow-negative-admin-withdraw: false
+
+history:
+  trade-retention-hours: 48
+  max-trade-entries: 100
+  default-command-amount: 25
+  balance-history-max-points: 500
+
+server-bank:
+  enabled: true
+  first-join-deposit: 1000.0
+  weekly:
+    enabled: true
+    day: MONDAY
+    hour: 0
+    minute: 0
+    timezone: Europe/Berlin
+    deposit-per-player-after-payout: 1000.0
+    clear-history-after-refill: true
+  history:
+    max-entries: 500
+    default-command-amount: 25
+
+donations:
+  enabled: true
+  player-tax-percent: 10.0
+  direct-server-bank-tax-percent: 0.0
+  broadcast-server-bank-donations: true
+  require-click-confirmation: true
+
+commands:
+  balance-enabled: true
+  checkbalance-enabled: true
+  checkhistory-enabled: true
+  tode-enabled: true
+  checktode-enabled: true
+  resetmarket-enabled: true
+  setmarket-enabled: true
+  settings-enabled: true
+  serverbank-enabled: true
+
+market:
+  # Price for 1 Inventory Unit
+  baseprice_high: 10000.0
+  # Minimum base price for very common items
+  baseprice_low: 0.05
+  price-change-percent-per-stack: 0.035
+  min-price: 0.01
+  sell-tax-percent: 10.0
+  price-history-max-points: 500
+  stabilization:
+    enabled: true
+    interval-hours: 168
+    factor-percent: 10.0
+  gui:
+    show-sell-tax-lore: true
+  categories:
+    mining:
+      name: Steinbruch und Erze
+      icon: NETHERITE_PICKAXE
+      items:
+        minecraft:stone: 80000
+        minecraft:cobblestone: 200000
+        minecraft:andesite: 150000
+        minecraft:polished_andesite: 100000
+        minecraft:diorite: 150000
+        minecraft:polished_diorite: 100000
+        minecraft:granite: 150000
+        minecraft:polished_granite: 100000
+        minecraft:tuff: 140000
+        minecraft:polished_tuff: 95000
+        minecraft:calcite: 50000
+        minecraft:dripstone_block: 45000
+        minecraft:deepslate: 70000
+        minecraft:cobbled_deepslate: 120000
+        minecraft:obsidian: 1500
+        minecraft:coal: 6000
+        minecraft:coal_block: 667
+        minecraft:coal_ore: 2500
+        minecraft:deepslate_coal_ore: 2200
+        minecraft:copper_ingot: 2500
+        minecraft:copper_block: 278
+        minecraft:copper_ore: 1600
+        minecraft:deepslate_copper_ore: 1400
+        minecraft:raw_copper: 2200
+        minecraft:raw_copper_block: 244
+        minecraft:iron_ingot: 1200
+        minecraft:iron_block: 133
+        minecraft:iron_ore: 700
+        minecraft:deepslate_iron_ore: 620
+        minecraft:raw_iron: 1000
+        minecraft:raw_iron_block: 111
+        minecraft:gold_ingot: 700
+        minecraft:gold_block: 78
+        minecraft:gold_ore: 450
+        minecraft:deepslate_gold_ore: 400
+        minecraft:raw_gold: 600
+        minecraft:raw_gold_block: 67
+        minecraft:diamond: 80
+        minecraft:diamond_block: 9
+        minecraft:diamond_ore: 50
+        minecraft:deepslate_diamond_ore: 45
+        minecraft:emerald: 90
+        minecraft:emerald_block: 10
+        minecraft:emerald_ore: 60
+        minecraft:deepslate_emerald_ore: 55
+        minecraft:lapis_lazuli: 2000
+        minecraft:lapis_block: 222
+        minecraft:lapis_ore: 700
+        minecraft:deepslate_lapis_ore: 620
+        minecraft:redstone: 3000
+        minecraft:redstone_block: 333
+        minecraft:redstone_ore: 800
+        minecraft:deepslate_redstone_ore: 700
+        minecraft:amethyst_block: 1500
+        minecraft:anvil: 35
+
+    lumber:
+      name: Holzfäller
+      icon: IRON_AXE
+      items:
+        minecraft:oak_log: 14000
+        minecraft:oak_planks: 56000
+        minecraft:oak_sapling: 20000
+        minecraft:spruce_log: 14000
+        minecraft:spruce_planks: 56000
+        minecraft:spruce_sapling: 20000
+        minecraft:birch_log: 14000
+        minecraft:birch_planks: 56000
+        minecraft:birch_sapling: 20000
+        minecraft:jungle_log: 13000
+        minecraft:jungle_planks: 52000
+        minecraft:jungle_sapling: 16000
+        minecraft:acacia_log: 14000
+        minecraft:acacia_planks: 56000
+        minecraft:acacia_sapling: 18000
+        minecraft:dark_oak_log: 13000
+        minecraft:dark_oak_planks: 52000
+        minecraft:dark_oak_sapling: 16000
+        minecraft:mangrove_log: 12000
+        minecraft:mangrove_planks: 48000
+        minecraft:mangrove_propagule: 14000
+        minecraft:cherry_log: 12000
+        minecraft:cherry_planks: 48000
+        minecraft:cherry_sapling: 14000
+        minecraft:pale_oak_log: 12000
+        minecraft:pale_oak_planks: 48000
+        minecraft:pale_oak_sapling: 14000
+        minecraft:oak_leaves: 200000
+        minecraft:spruce_leaves: 200000
+        minecraft:birch_leaves: 200000
+        minecraft:jungle_leaves: 200000
+        minecraft:acacia_leaves: 200000
+        minecraft:dark_oak_leaves: 200000
+        minecraft:mangrove_leaves: 160000
+        minecraft:cherry_leaves: 160000
+        minecraft:pale_oak_leaves: 160000
+        minecraft:azalea_leaves: 90000
+        minecraft:flowering_azalea_leaves: 70000
+
+    nether_end:
+      name: Nether und End
+      icon: NETHERRACK
+      items:
+        minecraft:smooth_basalt: 60000
+        minecraft:netherrack: 220000
+        minecraft:soul_sand: 35000
+        minecraft:soul_soil: 35000
+        minecraft:basalt: 60000
+        minecraft:blackstone: 45000
+        minecraft:gilded_blackstone: 1000
+        minecraft:nether_bricks: 12000
+        minecraft:magma_block: 9000
+        minecraft:glowstone: 4500
+        minecraft:shroomlight: 4200
+        minecraft:crying_obsidian: 600
+        minecraft:ancient_debris: 16
+        minecraft:nether_gold_ore: 450
+        minecraft:nether_quartz_ore: 900
+        minecraft:quartz: 2400
+        minecraft:quartz_block: 600
+        minecraft:nether_wart_block: 5000
+        minecraft:warped_wart_block: 5000
+        minecraft:crimson_fungus: 9000
+        minecraft:warped_fungus: 9000
+        minecraft:crimson_stem: 11000
+        minecraft:crimson_planks: 44000
+        minecraft:crimson_hyphae: 6500
+        minecraft:crimson_roots: 50000
+        minecraft:warped_stem: 11000
+        minecraft:warped_planks: 44000
+        minecraft:warped_hyphae: 6500
+        minecraft:warped_roots: 50000
+        minecraft:bone_block: 3000
+        minecraft:lodestone: 45
+
+    farming_nature:
+      name: Farmer und Natur
+      icon: GOLDEN_HOE
+      items:
+        minecraft:leather: 3500
+        minecraft:wheat: 50000
+        minecraft:wheat_seeds: 180000
+        minecraft:carrot: 55000
+        minecraft:potato: 55000
+        minecraft:poisonous_potato: 60000
+        minecraft:beetroot: 55000
+        minecraft:beetroot_seeds: 180000
+        minecraft:pumpkin: 9000
+        minecraft:carved_pumpkin: 8000
+        minecraft:pumpkin_seeds: 90000
+        minecraft:melon: 8500
+        minecraft:melon_slice: 65000
+        minecraft:melon_seeds: 90000
+        minecraft:sugar_cane: 35000
+        minecraft:sweet_berries: 50000
+        minecraft:cactus: 30000
+        minecraft:cocoa_beans: 25000
+        minecraft:brown_mushroom: 25000
+        minecraft:red_mushroom: 25000
+        minecraft:bread: 12000
+        minecraft:baked_potato: 20000
+        minecraft:hay_block: 5500
+        minecraft:rabbit_stew: 4500
+        minecraft:beef: 5000
+        minecraft:porkchop: 5000
+        minecraft:chicken: 6500
+        minecraft:mutton: 6500
+        minecraft:rabbit: 7500
+        minecraft:egg: 60000
+        minecraft:feather: 25000
+        minecraft:rabbit_hide: 12000
+        minecraft:rabbit_foot: 1500
+
+    water_fishing:
+      name: Wasser und Fischen
+      icon: FISHING_ROD
+      items:
+        minecraft:cod: 18000
+        minecraft:salmon: 16000
+        minecraft:tropical_fish: 6500
+        minecraft:pufferfish: 5000
+        minecraft:ink_sac: 14000
+        minecraft:glow_ink_sac: 7500
+        minecraft:lily_pad: 18000
+        minecraft:nautilus_shell: 300
+        minecraft:fishing_rod: 3000
+        minecraft:water_bucket: 1800
+        minecraft:sea_pickle: 12000
+        minecraft:ice: 40000
+        minecraft:packed_ice: 4500
+        minecraft:blue_ice: 500
+        minecraft:sponge: 180
+        minecraft:wet_sponge: 200
+        minecraft:prismarine: 5000
+        minecraft:prismarine_bricks: 4200
+        minecraft:dark_prismarine: 3300
+        minecraft:brain_coral_block: 2500
+        minecraft:bubble_coral_block: 2500
+        minecraft:fire_coral_block: 2500
+        minecraft:horn_coral_block: 2500
+        minecraft:tube_coral_block: 2500
+
+    colors_deco:
+      name: Farben und Deko
+      icon: WHITE_DYE
+      items:
+        minecraft:glass: 50000
+        minecraft:dandelion: 70000
+        minecraft:poppy: 70000
+        minecraft:blue_orchid: 45000
+        minecraft:allium: 50000
+        minecraft:azure_bluet: 70000
+        minecraft:red_tulip: 65000
+        minecraft:orange_tulip: 65000
+        minecraft:white_tulip: 65000
+        minecraft:pink_tulip: 65000
+        minecraft:oxeye_daisy: 70000
+        minecraft:cornflower: 60000
+        minecraft:lily_of_the_valley: 50000
+        minecraft:lilac: 40000
+        minecraft:rose_bush: 40000
+        minecraft:peony: 40000
+        minecraft:white_dye: 90000
+        minecraft:light_gray_dye: 70000
+        minecraft:gray_dye: 65000
+        minecraft:black_dye: 55000
+        minecraft:brown_dye: 50000
+        minecraft:red_dye: 80000
+        minecraft:orange_dye: 80000
+        minecraft:yellow_dye: 80000
+        minecraft:lime_dye: 70000
+        minecraft:green_dye: 45000
+        minecraft:cyan_dye: 60000
+        minecraft:light_blue_dye: 60000
+        minecraft:blue_dye: 55000
+        minecraft:purple_dye: 50000
+        minecraft:magenta_dye: 60000
+        minecraft:pink_dye: 65000
+        minecraft:white_wool: 30000
+        minecraft:light_gray_wool: 30000
+        minecraft:gray_wool: 30000
+        minecraft:black_wool: 30000
+        minecraft:brown_wool: 30000
+        minecraft:red_wool: 30000
+        minecraft:orange_wool: 30000
+        minecraft:yellow_wool: 30000
+        minecraft:lime_wool: 30000
+        minecraft:green_wool: 30000
+        minecraft:cyan_wool: 30000
+        minecraft:light_blue_wool: 30000
+        minecraft:blue_wool: 30000
+        minecraft:purple_wool: 30000
+        minecraft:magenta_wool: 30000
+        minecraft:pink_wool: 30000
+        minecraft:white_terracotta: 25000
+        minecraft:light_gray_terracotta: 25000
+        minecraft:gray_terracotta: 25000
+        minecraft:black_terracotta: 25000
+        minecraft:brown_terracotta: 25000
+        minecraft:red_terracotta: 25000
+        minecraft:orange_terracotta: 25000
+        minecraft:yellow_terracotta: 25000
+        minecraft:lime_terracotta: 25000
+        minecraft:green_terracotta: 25000
+        minecraft:cyan_terracotta: 25000
+        minecraft:light_blue_terracotta: 25000
+        minecraft:blue_terracotta: 25000
+        minecraft:purple_terracotta: 25000
+        minecraft:magenta_terracotta: 25000
+        minecraft:pink_terracotta: 25000
+        minecraft:white_glazed_terracotta: 12000
+        minecraft:light_gray_glazed_terracotta: 12000
+        minecraft:gray_glazed_terracotta: 12000
+        minecraft:black_glazed_terracotta: 12000
+        minecraft:brown_glazed_terracotta: 12000
+        minecraft:red_glazed_terracotta: 12000
+        minecraft:orange_glazed_terracotta: 12000
+        minecraft:yellow_glazed_terracotta: 12000
+        minecraft:lime_glazed_terracotta: 12000
+        minecraft:green_glazed_terracotta: 12000
+        minecraft:cyan_glazed_terracotta: 12000
+        minecraft:light_blue_glazed_terracotta: 12000
+        minecraft:blue_glazed_terracotta: 12000
+        minecraft:purple_glazed_terracotta: 12000
+        minecraft:magenta_glazed_terracotta: 12000
+        minecraft:pink_glazed_terracotta: 12000
+
+    miscellaneous:
+      name: Verschiedenes
+      icon: CRAFTING_TABLE
+      items:
+        minecraft:bone: 18000
+        minecraft:string: 16000
+        minecraft:stick: 80000
+        minecraft:bowl: 60000
+        minecraft:rotten_flesh: 140000
+        minecraft:name_tag: 250
+        minecraft:saddle: 220
+        minecraft:tripwire_hook: 4000
+        minecraft:leather_horse_armor: 700
+        minecraft:copper_horse_armor: 400
+        minecraft:iron_horse_armor: 240
+        minecraft:golden_horse_armor: 180
+        minecraft:diamond_horse_armor: 80
+        minecraft:netherite_horse_armor: 12
+        minecraft:chest: 4000
+        minecraft:hopper: 160
+        minecraft:trapped_chest: 1800
+        minecraft:sand: 180000
+        minecraft:red_sand: 160000
+        minecraft:gravel: 180000
+        minecraft:dirt: 300000
+        minecraft:coarse_dirt: 250000
+        minecraft:podzol: 60000
+        minecraft:mud: 220000
+        minecraft:mycelium: 45000
+        minecraft:clay: 30000
+        minecraft:sandstone: 70000
+        minecraft:chiseled_sandstone: 55000
+        minecraft:smooth_sandstone: 45000
+        minecraft:cut_sandstone: 55000
+        minecraft:red_sandstone: 65000
+        minecraft:chiseled_red_sandstone: 50000
+        minecraft:smooth_red_sandstone: 40000
+        minecraft:cut_red_sandstone: 50000
+        minecraft:bow: 3500
+        minecraft:leather_boots: 1200
